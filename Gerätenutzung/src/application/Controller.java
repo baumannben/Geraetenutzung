@@ -16,37 +16,38 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.shape.Circle;
 
 public class Controller  implements Initializable{
-
     @FXML
     private Circle TopLeft_Beinpresse;
-
     @FXML
     private Circle TopRight_Hantelbank;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_1;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_2;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_3;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_4;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_5;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_6;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_7;
-
     @FXML
     private ImageView MiddleMiddle_Fahrraeder_8;
-    
+    @FXML
+    private ImageView BottomLeft_Hantelset_6;
+    @FXML
+    private ImageView BottomLeft_Hantelset_3;
+    @FXML
+    private ImageView BottomLeft_Hantelset_4;
+    @FXML
+    private ImageView BottomLeft_Hantelset_1;
+    @FXML
+    private ImageView BottomLeft_Hantelset_2;
+    @FXML
+    private ImageView BottomLeft_Hantelset_5;
     public int haltbarkeit;
     
 	@Override

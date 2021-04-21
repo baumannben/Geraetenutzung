@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -7,49 +8,91 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
+      <ImageView fitHeight="414.0" fitWidth="615.0" layoutX="-9.0" layoutY="-10.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Background.png" />
+         </image>
+      </ImageView>
       <Circle id="Beinpresse" fx:id="TopLeft_Beinpresse" fill="#acacac" layoutX="51.0" layoutY="51.0" onMouseClicked="#openDetails" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#acacac" layoutX="51.0" layoutY="349.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#acacac" layoutX="549.0" layoutY="349.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle id="Hantelbank" fx:id="TopRight_Hantelbank" fill="#acacac" layoutX="549.0" layoutY="51.0" onMouseClicked="#openDetails" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
-      <ImageView id="Fahrrad 1" fx:id="MiddleMiddle_Fahrraeder_1" fitHeight="45.0" fitWidth="40.0" layoutX="220.0" layoutY="161.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 2" fx:id="MiddleMiddle_Fahrraeder_2" fitHeight="45.0" fitWidth="40.0" layoutX="260.0" layoutY="161.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 3" fx:id="MiddleMiddle_Fahrraeder_3" fitHeight="45.0" fitWidth="40.0" layoutX="300.0" layoutY="161.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 4" fx:id="MiddleMiddle_Fahrraeder_4" fitHeight="45.0" fitWidth="40.0" layoutX="340.0" layoutY="161.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 5" fx:id="MiddleMiddle_Fahrraeder_5" fitHeight="45.0" fitWidth="40.0" layoutX="220.0" layoutY="199.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 6" fx:id="MiddleMiddle_Fahrraeder_6" fitHeight="45.0" fitWidth="40.0" layoutX="260.0" layoutY="199.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 7" fx:id="MiddleMiddle_Fahrraeder_7" fitHeight="45.0" fitWidth="40.0" layoutX="300.0" layoutY="199.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
-      <ImageView id="Fahrrad 8" fx:id="MiddleMiddle_Fahrraeder_8" fitHeight="45.0" fitWidth="40.0" layoutX="340.0" layoutY="199.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/Bike-grun.png" />
-         </image>
-      </ImageView>
+      <Group layoutX="220.0" layoutY="161.0">
+         <children>
+            <ImageView id="Fahrrad 1" fx:id="MiddleMiddle_Fahrraeder_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 2" fx:id="MiddleMiddle_Fahrraeder_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 3" fx:id="MiddleMiddle_Fahrraeder_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 4" fx:id="MiddleMiddle_Fahrraeder_4" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 5" fx:id="MiddleMiddle_Fahrraeder_5" fitHeight="45.0" fitWidth="40.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 6" fx:id="MiddleMiddle_Fahrraeder_6" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 7" fx:id="MiddleMiddle_Fahrraeder_7" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Fahrrad 8" fx:id="MiddleMiddle_Fahrraeder_8" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="14.0" layoutY="310.0">
+         <children>
+            <ImageView id="Hantelset 6" fx:id="BottomLeft_Hantelset_6" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelset 3" fx:id="BottomLeft_Hantelset_3" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelset 4" fx:id="BottomLeft_Hantelset_4" fitHeight="45.0" fitWidth="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelset 1" fx:id="BottomLeft_Hantelset_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelset 2" fx:id="BottomLeft_Hantelset_2" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelset 5" fx:id="BottomLeft_Hantelset_5" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
    </children>
 </AnchorPane>

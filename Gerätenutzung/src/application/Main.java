@@ -15,6 +15,7 @@ public class Main extends Application {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Sample.fxml"));
 			Scene scene = new Scene(root,600,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setTitle("Gerätemanagement-Program");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
