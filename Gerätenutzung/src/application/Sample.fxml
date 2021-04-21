@@ -4,18 +4,14 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Circle?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
-      <ImageView fitHeight="414.0" fitWidth="615.0" layoutX="-9.0" layoutY="-10.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="409.0" fitWidth="611.0" layoutX="-7.0" layoutY="-8.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/Background.png" />
          </image>
       </ImageView>
-      <Circle id="Beinpresse" fx:id="TopLeft_Beinpresse" fill="#acacac" layoutX="51.0" layoutY="51.0" onMouseClicked="#openDetails" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#acacac" layoutX="549.0" layoutY="349.0" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle id="Hantelbank" fx:id="TopRight_Hantelbank" fill="#acacac" layoutX="549.0" layoutY="51.0" onMouseClicked="#openDetails" radius="37.0" stroke="BLACK" strokeType="INSIDE" />
       <Group layoutX="220.0" layoutY="161.0">
          <children>
             <ImageView id="Fahrrad 1" fx:id="MiddleMiddle_Fahrraeder_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
@@ -90,6 +86,98 @@
             <ImageView id="Hantelset 5" fx:id="BottomLeft_Hantelset_5" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="34.0" layoutY="24.0">
+         <children>
+            <ImageView id="Beinpresse 1" fx:id="TopLeft_Beinpresse_1" fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Legpress-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Beinpresse 1" fx:id="TopLeft_Beinpresse_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Legpress-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Beinpresse 1" fx:id="TopLeft_Beinpresse_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Legpress-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Beinpresse 1" fx:id="TopLeft_Beinpresse_4" fitHeight="45.0" fitWidth="40.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Legpress-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Beinpresse 1" fx:id="TopLeft_Beinpresse_5" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Legpress-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Beinpresse 1" fx:id="TopLeft_Beinpresse_6" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Legpress-grun.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="452.0" layoutY="33.0">
+         <children>
+            <ImageView id="Hantelbank 1" fx:id="TopRight_Hantelbank_1" fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hantelbank-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelbank 2" fx:id="TopRight_Hantelbank_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hantelbank-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelbank 3" fx:id="TopRight_Hantelbank_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hantelbank-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelbank 4" fx:id="TopRight_Hantelbank_4" fitHeight="45.0" fitWidth="40.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hantelbank-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelbank 5" fx:id="TopRight_Hantelbank_5" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hantelbank-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Hantelbank 6" fx:id="TopRight_Hantelbank_6" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Hantelbank-grun.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="471.0" layoutY="259.0">
+         <children>
+            <ImageView id="Latzug 1" fx:id="BottomRight_Latzug_1" fitHeight="45.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Latzug-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Latzug 2" fx:id="BottomRight_Latzug_2" fitHeight="45.0" fitWidth="40.0" layoutX="46.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Latzug-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Latzug 3" fx:id="BottomRight_Latzug_3" fitHeight="45.0" fitWidth="40.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Latzug-grun.png" />
+               </image>
+            </ImageView>
+            <ImageView id="Latzug 4" fx:id="BottomRight_Latzug_4" fitHeight="45.0" fitWidth="40.0" layoutX="47.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Latzug-grun.png" />
                </image>
             </ImageView>
          </children>
