@@ -6,6 +6,9 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -78,7 +81,12 @@ public class Controller implements Initializable {
 	@FXML
 	private ImageView latzug_4;
 
-	public int[] haltbarkeiten = new int[100];
+	public int[] haltbarkeiten = new int[31];
+	public String[] namen = new String[31];
+	public int[] id = new int[31];
+	public Date[] date = new Date[31];
+	public int[] belastungsgrad = new int[31];
+	public boolean[] belegt = new boolean[31];
 
 	public ImageView[] fahrraeder;
 	public ImageView[] latzuege;
@@ -103,13 +111,23 @@ public class Controller implements Initializable {
 			String line = "";
 			String splitBy = ";";
 			int i = 0;
+			SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 			while ((line = br.readLine()) != null) {
 				String[] geraete = line.split(splitBy);
 				System.out.println("ID: " + geraete[0] + " Name: " + geraete[1] + " Datum/Uhrzeit: " + geraete[2]
 						+ " Alter: " + geraete[3] + " Haltbarkeit: " + geraete[4] + " Belastungsgrad: " + geraete[5]
-						+ " Belegt?: " + geraete[6]);
+						+ " Momentan belegt?: " + geraete[6]);
 				if (i >= 1) {
 					haltbarkeiten[i] = Integer.parseInt(geraete[4]);
+					namen[i] = geraete[1];
+					id[i] = Integer.parseInt(geraete[0]);
+					belastungsgrad[i] = Integer.parseInt(geraete[5]);
+					belegt[i] = Boolean.parseBoolean(geraete[6]);
+					try {
+						date[i] = formatter.parse(geraete[2]);
+					} catch (ParseException e) {
+						e.printStackTrace();
+					}
 				}
 				i++;
 			}
@@ -270,11 +288,11 @@ public class Controller implements Initializable {
 	}
 
 	public void openDetails(MouseEvent event) {
-		String name = event.getPickResult().getIntersectedNode().getId();
+		int nodeID = Integer.parseInt(event.getPickResult().getIntersectedNode().getId());
 		Alert details = new Alert(AlertType.INFORMATION);
 		details.setTitle("Details");
-		details.setHeaderText(name);
-		details.setContentText("Details:\nHaltbarkeit: " + event.getPickResult().getIntersectedNode().getId());
+		details.setHeaderText("Gerätename: "+ namen[nodeID] + "\nID: " +id[nodeID]);
+		details.setContentText("Date: "+date[nodeID]+"\nHaltbarkeit: " + haltbarkeiten[nodeID]+"\nBelastungsgrad: "+belastungsgrad[nodeID]+"\nBelegt? "+belegt[nodeID]);
 		details.show();
 	}
 }

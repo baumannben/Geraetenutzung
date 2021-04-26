@@ -14,42 +14,42 @@
       </ImageView>
       <Group layoutX="220.0" layoutY="161.0">
          <children>
-            <ImageView id="Fahrrad 1" fx:id="fahrrad_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="1" fx:id="fahrrad_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 2" fx:id="fahrrad_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="2" fx:id="fahrrad_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 3" fx:id="fahrrad_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="3" fx:id="fahrrad_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 4" fx:id="fahrrad_4" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="4" fx:id="fahrrad_4" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 5" fx:id="fahrrad_5" fitHeight="45.0" fitWidth="40.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="5" fx:id="fahrrad_5" fitHeight="45.0" fitWidth="40.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 6" fx:id="fahrrad_6" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="6" fx:id="fahrrad_6" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 7" fx:id="fahrrad_7" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="7" fx:id="fahrrad_7" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Fahrrad 8" fx:id="fahrrad_8" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="8" fx:id="fahrrad_8" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" layoutY="38.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../OneDrive/Desktop/Eclipse%20Stuff/Gerätenutzung/src/images/Bike-grun.png" />
                </image>
@@ -58,32 +58,32 @@
       </Group>
       <Group layoutX="14.0" layoutY="310.0">
          <children>
-            <ImageView id="Hantelset 6" fx:id="hantelset_6" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="24" fx:id="hantelset_6" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelset 3" fx:id="hantelset_3" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="21" fx:id="hantelset_3" fitHeight="45.0" fitWidth="40.0" layoutX="120.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelset 4" fx:id="hantelset_4" fitHeight="45.0" fitWidth="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="22" fx:id="hantelset_4" fitHeight="45.0" fitWidth="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelset 1" fx:id="hantelset_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="19" fx:id="hantelset_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelset 2" fx:id="hantelset_2" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="20" fx:id="hantelset_2" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelset 5" fx:id="hantelset_5" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="23" fx:id="hantelset_5" fitHeight="45.0" fitWidth="40.0" layoutX="60.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Dumbell-grun.png" />
                </image>
@@ -92,32 +92,32 @@
       </Group>
       <Group layoutX="34.0" layoutY="24.0">
          <children>
-            <ImageView id="Beinpresse 1" fx:id="beinpresse_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="25" fx:id="beinpresse_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Legpress-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Beinpresse 2" fx:id="beinpresse_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="26" fx:id="beinpresse_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Legpress-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Beinpresse 3" fx:id="beinpresse_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="27" fx:id="beinpresse_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Legpress-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Beinpresse 4" fx:id="beinpresse_4" fitHeight="45.0" fitWidth="40.0" layoutY="55.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="28" fx:id="beinpresse_4" fitHeight="45.0" fitWidth="40.0" layoutY="55.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Legpress-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Beinpresse 5" fx:id="beinpresse_5" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="55.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="29" fx:id="beinpresse_5" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="55.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Legpress-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Beinpresse 6" fx:id="beinpresse_6" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="55.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="30" fx:id="beinpresse_6" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="55.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Legpress-grun.png" />
                </image>
@@ -126,32 +126,32 @@
       </Group>
       <Group layoutX="452.0" layoutY="33.0">
          <children>
-            <ImageView id="Hantelbank 1" fx:id="hantelbank_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="9" fx:id="hantelbank_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Hantelbank-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelbank 2" fx:id="hantelbank_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="10" fx:id="hantelbank_2" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Hantelbank-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelbank 3" fx:id="hantelbank_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="11" fx:id="hantelbank_3" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Hantelbank-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelbank 4" fx:id="hantelbank_4" fitHeight="45.0" fitWidth="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="12" fx:id="hantelbank_4" fitHeight="45.0" fitWidth="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Hantelbank-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelbank 5" fx:id="hantelbank_5" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="13" fx:id="hantelbank_5" fitHeight="45.0" fitWidth="40.0" layoutX="40.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Hantelbank-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Hantelbank 6" fx:id="hantelbank_6" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="14" fx:id="hantelbank_6" fitHeight="45.0" fitWidth="40.0" layoutX="80.0" layoutY="37.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Hantelbank-grun.png" />
                </image>
@@ -160,22 +160,22 @@
       </Group>
       <Group layoutX="471.0" layoutY="259.0">
          <children>
-            <ImageView id="Latzug 1" fx:id="latzug_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="15" fx:id="latzug_1" fitHeight="45.0" fitWidth="40.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Latzug-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Latzug 2" fx:id="latzug_2" fitHeight="45.0" fitWidth="40.0" layoutX="46.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="16" fx:id="latzug_2" fitHeight="45.0" fitWidth="40.0" layoutX="46.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Latzug-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Latzug 3" fx:id="latzug_3" fitHeight="45.0" fitWidth="40.0" layoutY="57.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="17" fx:id="latzug_3" fitHeight="45.0" fitWidth="40.0" layoutY="57.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Latzug-grun.png" />
                </image>
             </ImageView>
-            <ImageView id="Latzug 4" fx:id="latzug_4" fitHeight="45.0" fitWidth="40.0" layoutX="47.0" layoutY="57.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
+            <ImageView id="18" fx:id="latzug_4" fitHeight="45.0" fitWidth="40.0" layoutX="47.0" layoutY="57.0" onMouseClicked="#openDetails" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/Latzug-grun.png" />
                </image>
