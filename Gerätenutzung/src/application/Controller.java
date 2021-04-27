@@ -93,10 +93,14 @@ public class Controller implements Initializable {
 	public ImageView[] hantelbaenke;
 	public ImageView[] beinpressen;
 	public ImageView[] hantelsets;
-
+	/**
+	 * Hier werden zunächst einmal Image View Gruppen als Arrays
+	 * gebildet welche später zur Zuordnung der Haltbarkeiten wichtig werden.
+	 * Dann wird die CSV Datei mit den jeweiligen Daten ausgelesen und in
+	 * Arrays gespeichert.
+	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// (Controller.class.getResourceAsStream("Geratenutzung.csv"))
 		fahrraeder = new ImageView[] { fahrrad_1, fahrrad_2, fahrrad_3, fahrrad_4, fahrrad_5, fahrrad_6, fahrrad_7,
 				fahrrad_8 };
 		latzuege = new ImageView[] { latzug_1, latzug_2, latzug_3, latzug_4 };
@@ -136,9 +140,10 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 		initAll();
-
 	}
-
+	/**
+	 * Initialisiert alle Image-Views mit den zu ihrer Haltbarkeit passenden Images
+	 */
 	public void initAll() {
 		initBeinpressen();
 		initFahrraeder();
@@ -146,7 +151,6 @@ public class Controller implements Initializable {
 		initHantelsets();
 		initLatzuege();
 	}
-
 	public void initFahrraeder() {
 		try {
 			int k = 0;
@@ -286,13 +290,17 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * Hier werden die Daten der Geräte ausgegeben
+	 * @param event MouseClick auf das jeweilige Gerät
+	 */
 	public void openDetails(MouseEvent event) {
 		int nodeID = Integer.parseInt(event.getPickResult().getIntersectedNode().getId());
 		Alert details = new Alert(AlertType.INFORMATION);
 		details.setTitle("Details");
-		details.setHeaderText("Gerätename: "+ namen[nodeID] + "\nID: " +id[nodeID]);
-		details.setContentText("Date: "+date[nodeID]+"\nHaltbarkeit: " + haltbarkeiten[nodeID]+"\nBelastungsgrad: "+belastungsgrad[nodeID]+"\nBelegt? "+belegt[nodeID]);
+		details.setHeaderText("Gerätename: " + namen[nodeID] + "\nID: " + id[nodeID]);
+		details.setContentText("Date: " + date[nodeID] + "\nHaltbarkeit: " + haltbarkeiten[nodeID]
+				+ "\nBelastungsgrad: " + belastungsgrad[nodeID] + "\nBelegt? " + belegt[nodeID]);
 		details.show();
 	}
 }
