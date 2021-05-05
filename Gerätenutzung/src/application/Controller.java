@@ -1,15 +1,10 @@
 package application;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.net.URL;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.sql.*;
 import javafx.fxml.FXML;
@@ -21,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class Controller implements Initializable {
+	
 	@FXML
 	private ImageView fahrrad_1;
 	@FXML
@@ -84,10 +80,16 @@ public class Controller implements Initializable {
 
 	public int[] haltbarkeiten = new int[31];
 	public String[] namen = new String[31];
-	public int[] id = new int[31];
+	public String[] id = new String[31];
 	public Date[] date = new Date[31];
 	public int[] belastungsgrad = new int[31];
 	public boolean[] belegt = new boolean[31];
+//	public int[] haltbarkeiten;
+//	public String[] namen;
+//	public String[] id;
+//	public Date[] date;
+//	public int[] belastungsgrad;
+//	public boolean[] belegt;
 
 	public ImageView[] fahrraeder;
 	public ImageView[] latzuege;
@@ -104,28 +106,28 @@ public class Controller implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		try {
-			Class.forName("oracle.jdbc.driver.OracleDriver");
+			try {
+				Class.forName("oracle.jdbc.driver.OracleDriver");
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@oracle.s-atiw.de:1521:atiwora", "FS192_bbaumann", "ben");
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("SELECT x.*,x.ROWID FROM FS192_LTROESCH.TRAININGSGERAET x");
 			int i = 0;
-			SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-			while (rs.next())
-				System.out.println(rs.getString(1) + "  " + rs.getDate(2)
-				+ "  " + rs.getString(3)+ "  " + rs.getString(4)
-				+ "  " + rs.getString(5)+ "  " + rs.getString(6)
-				+ "  " + rs.getString(7)+ "  " + rs.getString(8)
-				+ "  " + rs.getString(9));
-				try {
-					id[i] = Integer.parseInt(rs.getString(1));
+			while (rs.next()){
+			id[i] = rs.getString(1);
+			namen[i] = rs.getString(3);
+			belegt[i] = Boolean.parseBoolean(rs.getString(4));
+			//Lebensdauer 5
+			//Kaufdatum 6
+			haltbarkeiten[i] = Integer.parseInt(rs.getString(7));
+			belastungsgrad[i] = Integer.parseInt(rs.getString(8));
+			//Belegungsplan_ID 9
+			try {
 					date[i] = rs.getDate(2);
-					namen[i] = rs.getString(3);
-					belegt[i] = Boolean.parseBoolean(rs.getString(4));
-					//Lebensdauer 5
-					//Kaufdatum 6
-					haltbarkeiten[i] = Integer.parseInt(rs.getString(7));
-					belastungsgrad[i] = Integer.parseInt(rs.getString(8));
-					//Belegungsplan_ID 9
+					
 				} catch (Exception e) {
 					System.out.println("Fehler in der Datenverarbeitung!");
 					e.printStackTrace();
@@ -133,9 +135,9 @@ public class Controller implements Initializable {
 
 			
 			i++;
-			
+			}
 			con.close();
-		} catch (Exception e1) {
+		} catch (SQLException e1) {
 			System.out.println("Verbindungsfehler!");
 			e1.printStackTrace();
 		}
@@ -197,7 +199,7 @@ public class Controller implements Initializable {
 			int k = 0;
 			int l = 0;
 			for (String s : namen) {
-				if (l >= 1) {
+				if (l <= 29) {
 					if (s.contains("Fahrrad")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
@@ -231,7 +233,7 @@ public class Controller implements Initializable {
 			int k = 0;
 			int l = 0;
 			for (String s : namen) {
-				if (l >= 1) {
+				if (l <= 29) {
 					if (s.contains("Hantelset")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
@@ -265,7 +267,7 @@ public class Controller implements Initializable {
 			int k = 0;
 			int l = 0;
 			for (String s : namen) {
-				if (l >= 1) {
+				if (l <= 29) {
 					if (s.contains("Latzug")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
@@ -299,7 +301,7 @@ public class Controller implements Initializable {
 			int k = 0;
 			int l = 0;
 			for (String s : namen) {
-				if (l >= 1) {
+				if (l <= 29) {
 					if (s.contains("Hantelbank")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
@@ -333,7 +335,7 @@ public class Controller implements Initializable {
 			int k = 0;
 			int l = 0;
 			for (String s : namen) {
-				
+				if (l <= 29) {
 					if (s.contains("Beinpresse")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
@@ -354,7 +356,7 @@ public class Controller implements Initializable {
 						}
 						k++;
 					}
-				
+				}
 				l++;
 			}
 		} catch (FileNotFoundException e) {
