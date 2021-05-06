@@ -3,7 +3,6 @@ package application;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.sql.*;
@@ -78,109 +77,111 @@ public class Controller implements Initializable {
 	@FXML
 	private ImageView latzug_4;
 
+	//Arrays für die Daten der Datenbank
 	public int[] haltbarkeiten = new int[31];
 	public String[] namen = new String[31];
 	public String[] id = new String[31];
 	public Date[] date = new Date[31];
 	public int[] belastungsgrad = new int[31];
 	public boolean[] belegt = new boolean[31];
-//	public int[] haltbarkeiten;
-//	public String[] namen;
-//	public String[] id;
-//	public Date[] date;
-//	public int[] belastungsgrad;
-//	public boolean[] belegt;
+	public int[] lebensdauer = new int[31];
+	public Date[] kaufDatum = new Date[31];
+	public String[] belegungsplan_ID = new String[31];
 
+	//Arrays für die @FXML Image Views 
 	public ImageView[] fahrraeder;
 	public ImageView[] latzuege;
 	public ImageView[] hantelbaenke;
 	public ImageView[] beinpressen;
 	public ImageView[] hantelsets;
 
-	/**
-	 * Hier werden zunächst einmal Image View Gruppen als Arrays gebildet welche
-	 * später zur Zuordnung der Haltbarkeiten wichtig werden. Dann wird die CSV
-	 * Datei mit den jeweiligen Daten ausgelesen und in Arrays gespeichert.
-	 */
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		//Das sind die Geräte (als ImageViews) die im Grundriss angezeigt werden. Noch Hardgecoded!
+		fahrraeder = new ImageView[] { fahrrad_1, fahrrad_2, fahrrad_3, fahrrad_4, fahrrad_5, fahrrad_6, fahrrad_7,fahrrad_8 };
+		latzuege = new ImageView[] { latzug_1, latzug_2, latzug_3, latzug_4 };
+		hantelbaenke = new ImageView[] { hantelbank_1, hantelbank_2, hantelbank_3, hantelbank_4, hantelbank_5,hantelbank_6 };
+		beinpressen = new ImageView[] { beinpresse_1, beinpresse_2, beinpresse_3, beinpresse_4, beinpresse_5,beinpresse_6 };
+		hantelsets = new ImageView[] { hantelset_1, hantelset_2, hantelset_3, hantelset_4, hantelset_5, hantelset_6 };
+		readDB();
+		giveID();
+		initAll();
+	}
+	
+	/**
+	 * Hier werden die Daten aus der Datenbank ausgelesen und in jeweils passende Arrays gespeichert.
+	 */
+	public void readDB() {
 		try {
 			try {
 				Class.forName("oracle.jdbc.driver.OracleDriver");
-			} catch (ClassNotFoundException e1) {
-				// TODO Auto-generated catch block
+			}
+			catch (ClassNotFoundException e1) {
 				e1.printStackTrace();
 			}
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@oracle.s-atiw.de:1521:atiwora", "FS192_bbaumann", "ben");
-			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT x.*,x.ROWID FROM FS192_LTROESCH.TRAININGSGERAET x");
+			Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@oracle.s-atiw.de:1521:atiwora", "FS192_bbaumann", "ben");
+			Statement stmt = connection.createStatement();
+			ResultSet results = stmt.executeQuery("SELECT x.*,x.ROWID FROM FS192_LTROESCH.TRAININGSGERAET x");
+			
 			int i = 0;
-			while (rs.next()){
-			id[i] = rs.getString(1);
-			namen[i] = rs.getString(3);
-			belegt[i] = Boolean.parseBoolean(rs.getString(4));
-			//Lebensdauer 5
-			//Kaufdatum 6
-			haltbarkeiten[i] = Integer.parseInt(rs.getString(7));
-			belastungsgrad[i] = Integer.parseInt(rs.getString(8));
-			//Belegungsplan_ID 9
-			try {
-					date[i] = rs.getDate(2);
-					
-				} catch (Exception e) {
-					System.out.println("Fehler in der Datenverarbeitung!");
+			while (results.next()){
+				id[i] = results.getString(1);
+				namen[i] = results.getString(3);
+				belegt[i] = Boolean.parseBoolean(results.getString(4));
+				lebensdauer[i] = Integer.parseInt(results.getString(5));
+				haltbarkeiten[i] = Integer.parseInt(results.getString(7));
+				belastungsgrad[i] = Integer.parseInt(results.getString(8));
+				belegungsplan_ID[i]= results.getString(9);
+				try {
+					kaufDatum[i] = results.getDate(6);
+					date[i] = results.getDate(2);
+					}
+				catch (Exception e) {
 					e.printStackTrace();
 				}
-
-			
 			i++;
 			}
-			con.close();
+			connection.close();
 		} catch (SQLException e1) {
-			System.out.println("Verbindungsfehler!");
 			e1.printStackTrace();
 		}
+	}
+	/**
+	 * Hier werden die IDs aus der Datenbank den IDs von JavaFX zugewiesen
+	 */
+	public void giveID() {
+		int n = 0;
+		int o = 0;
+		int p = 0;
+		int q = 0;
+		int r = 0;
+		int t = 0;
 		
-		fahrraeder = new ImageView[] { fahrrad_1, fahrrad_2, fahrrad_3, fahrrad_4, fahrrad_5, fahrrad_6, fahrrad_7,
-				fahrrad_8 };
-		latzuege = new ImageView[] { latzug_1, latzug_2, latzug_3, latzug_4 };
-		hantelbaenke = new ImageView[] { hantelbank_1, hantelbank_2, hantelbank_3, hantelbank_4, hantelbank_5,
-				hantelbank_6 };
-		beinpressen = new ImageView[] { beinpresse_1, beinpresse_2, beinpresse_3, beinpresse_4, beinpresse_5,
-				beinpresse_6 };
-		hantelsets = new ImageView[] { hantelset_1, hantelset_2, hantelset_3, hantelset_4, hantelset_5, hantelset_6 };
-		/*try {
-			BufferedReader br = new BufferedReader(new FileReader(
-					"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\application\\Geratenutzung.csv"));
-			String line = "";
-			String splitBy = ";";
-			int i = 0;
-			SimpleDateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
-			while ((line = br.readLine()) != null) {
-				String[] geraete = line.split(splitBy);
-				System.out.println("ID: " + geraete[0] + " Name: " + geraete[1] + " Datum/Uhrzeit: " + geraete[2]
-						+ " Alter: " + geraete[3] + " Haltbarkeit: " + geraete[4] + " Belastungsgrad: " + geraete[5]
-						+ " Momentan belegt?: " + geraete[6]);
-				if (i >= 1) {
-					haltbarkeiten[i] = Integer.parseInt(geraete[4]);
-					namen[i] = geraete[1];
-					id[i] = Integer.parseInt(geraete[0]);
-					belastungsgrad[i] = Integer.parseInt(geraete[5]);
-					belegt[i] = Boolean.parseBoolean(geraete[6]);
-					try {
-						date[i] = formatter.parse(geraete[2]);
-					} catch (ParseException e) {
-						e.printStackTrace();
-					}
+		for (String s : namen) {
+			if (t <= 29) {
+				if (s.contains("Beinpresse")) {
+					beinpressen[n].setId(id[t]);
+					n++;
 				}
-				i++;
+				else if (s.contains("Hantelbank")) {
+					hantelbaenke[o].setId(id[t]);
+					o++;
+				}
+				else if (s.contains("Latzug")) {
+					latzuege[p].setId(id[t]);
+					p++;
+				}
+				else if (s.contains("Hanteln")) {
+					hantelsets[q].setId(id[t]);
+					q++;
+				}
+				else if (s.contains("Fahrrad")) {
+					fahrraeder[r].setId(id[t]);
+					r++;
+				}
 			}
-			br.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
-		initAll();
+			t++;
+		}
 	}
 
 	/**
@@ -193,7 +194,9 @@ public class Controller implements Initializable {
 		initHantelsets();
 		initLatzuege();
 	}
-
+	/**
+	 * Hier wird die Haltbarkeit von den jeweiligen Fahrrädern ausgelesen und das entsprechende Image (Rot/Gelb/Grün) zugewiesen.
+	 */
 	public void initFahrraeder() {
 		try {
 			int k = 0;
@@ -227,14 +230,16 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
+	/**
+	 * Wie initFahrrader()
+	 */
 	public void initHantelsets() {
 		try {
 			int k = 0;
 			int l = 0;
 			for (String s : namen) {
 				if (l <= 29) {
-					if (s.contains("Hantelset")) {
+					if (s.contains("Hanteln")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
 							Image j = new Image(new FileInputStream(
@@ -261,7 +266,10 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Wie initFahrrader()
+	 */
 	public void initLatzuege() {
 		try {
 			int k = 0;
@@ -295,7 +303,10 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Wie initFahrrader()
+	 */
 	public void initHantelbaenke() {
 		try {
 			int k = 0;
@@ -329,7 +340,10 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/**
+	 * Wie initFahrrader()
+	 */
 	public void initBeinpressen() {
 		try {
 			int k = 0;
@@ -338,7 +352,7 @@ public class Controller implements Initializable {
 				if (l <= 29) {
 					if (s.contains("Beinpresse")) {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
-
+							
 							Image j = new Image(new FileInputStream(
 									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Legpress-grun.png"));
 							beinpressen[k].setImage(j);
@@ -365,17 +379,30 @@ public class Controller implements Initializable {
 	}
 
 	/**
-	 * Hier werden die Daten der Geräte ausgegeben
+	 * Hier werden alle in der Datenbank gespeicherte Daten des angeklickten Geräts ausgegeben.
 	 * 
-	 * @param event MouseClick auf das jeweilige Gerät
+	 * @param event MouseClick auf das jeweilige Gerät / ImageView
 	 */
 	public void openDetails(MouseEvent event) {
-		int nodeID = Integer.parseInt(event.getPickResult().getIntersectedNode().getId());
+		String nodeID = event.getPickResult().getIntersectedNode().getId();
 		Alert details = new Alert(AlertType.INFORMATION);
 		details.setTitle("Details");
-		details.setHeaderText("Gerätename: " + namen[nodeID] + "\nID: " + id[nodeID]);
-		details.setContentText("Date: " + date[nodeID] + "\nHaltbarkeit: " + haltbarkeiten[nodeID]
-				+ "\nBelastungsgrad: " + belastungsgrad[nodeID] + "\nBelegt? " + belegt[nodeID]);
-		details.show();
+		int stelle;
+		int t = 0;
+		for (String s : id) {
+			if (t <= 29) {
+				if(s.equals(nodeID)) {
+					stelle= t;
+					details.setHeaderText("Gerätename: " + namen[stelle] + "\nID: " + id[stelle]);
+					details.setContentText("Aktuelles Datum: " + date[stelle] + "\nHaltbarkeit: " + haltbarkeiten[stelle]+" %"
+							+ "\nBelastungsgrad: " + belastungsgrad[stelle] + "\nBelegt? " + belegt[stelle]
+							+ "\nLebensdauer: " + lebensdauer[stelle]+" Jahr/e" + "\nKaufdatum: " + kaufDatum[stelle] + "\nBelegungsplan ID: "
+							+ belegungsplan_ID[stelle]);
+					details.show();
+				}
+			}
+			t++;
+		}
+		
 	}
 }
