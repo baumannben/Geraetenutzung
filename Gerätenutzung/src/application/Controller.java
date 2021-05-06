@@ -146,6 +146,7 @@ public class Controller implements Initializable {
 			e1.printStackTrace();
 		}
 	}
+	
 	/**
 	 * Hier werden die IDs aus der Datenbank den IDs von JavaFX zugewiesen
 	 */
@@ -194,6 +195,7 @@ public class Controller implements Initializable {
 		initHantelsets();
 		initLatzuege();
 	}
+	
 	/**
 	 * Hier wird die Haltbarkeit von den jeweiligen Fahrrädern ausgelesen und das entsprechende Image (Rot/Gelb/Grün) zugewiesen.
 	 */
@@ -230,6 +232,7 @@ public class Controller implements Initializable {
 			e.printStackTrace();
 		}
 	}
+	
 	/**
 	 * Wie initFahrrader()
 	 */
