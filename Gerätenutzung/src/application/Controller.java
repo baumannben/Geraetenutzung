@@ -209,18 +209,18 @@ public class Controller implements Initializable {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Bike-grun.png"));
+									"src\\images\\Bike-grun.png"));
 							fahrraeder[k].setImage(j);
 						} else if (haltbarkeiten[l] < 70 && haltbarkeiten[l] > 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Bike-gelb.png"));
+									"src\\images\\Bike-gelb.png"));
 							fahrraeder[k].setImage(j);
 
 						} else if (haltbarkeiten[l] <= 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Bike-rot.png"));
+									"src\\images\\Bike-rot.png"));
 							fahrraeder[k].setImage(j);
 						}
 						k++;
@@ -246,18 +246,18 @@ public class Controller implements Initializable {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Dumbell-grun.png"));
+									"src\\images\\Dumbell-grun.png"));
 							hantelsets[k].setImage(j);
 						} else if (haltbarkeiten[l] < 70 && haltbarkeiten[l] > 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Dumbell-gelb.png"));
+									"src\\images\\Dumbell-gelb.png"));
 							hantelsets[k].setImage(j);
 
 						} else if (haltbarkeiten[l] <= 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Dumbell-rot.png"));
+									"src\\images\\Dumbell-rot.png"));
 							hantelsets[k].setImage(j);
 						}
 						k++;
@@ -283,18 +283,18 @@ public class Controller implements Initializable {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Latzug-grun.png"));
+									"src\\images\\Latzug-grun.png"));
 							latzuege[k].setImage(j);
 						} else if (haltbarkeiten[l] < 70 && haltbarkeiten[l] > 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Latzug-gelb.png"));
+									"src\\images\\Latzug-gelb.png"));
 							latzuege[k].setImage(j);
 
 						} else if (haltbarkeiten[l] <= 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Latzug-rot.png"));
+									"src\\images\\Latzug-rot.png"));
 							latzuege[k].setImage(j);
 						}
 						k++;
@@ -320,18 +320,18 @@ public class Controller implements Initializable {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Hantelbank-grun.png"));
+									"src\\images\\Hantelbank-grun.png"));
 							hantelbaenke[k].setImage(j);
 						} else if (haltbarkeiten[l] < 70 && haltbarkeiten[l] > 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Hantelbank-gelb.png"));
+									"src\\images\\Hantelbank-gelb.png"));
 							hantelbaenke[k].setImage(j);
 
 						} else if (haltbarkeiten[l] <= 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Hantelbank-rot.png"));
+									"src\\images\\Hantelbank-rot.png"));
 							hantelbaenke[k].setImage(j);
 						}
 						k++;
@@ -357,18 +357,18 @@ public class Controller implements Initializable {
 						if (haltbarkeiten[l] < 100 && haltbarkeiten[l] >= 70) {
 							
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Legpress-grun.png"));
+									"src\\images\\Legpress-grun.png"));
 							beinpressen[k].setImage(j);
 						} else if (haltbarkeiten[l] < 70 && haltbarkeiten[l] > 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Legpress-gelb.png"));
+									"src\\images\\Legpress-gelb.png"));
 							beinpressen[k].setImage(j);
 
 						} else if (haltbarkeiten[l] <= 30) {
 
 							Image j = new Image(new FileInputStream(
-									"C:\\Users\\deben\\git\\Geraetenutzung\\Gerätenutzung\\src\\images\\Legpress-rot.png"));
+									"src\\images\\Legpress-rot.png"));
 							beinpressen[k].setImage(j);
 						}
 						k++;
